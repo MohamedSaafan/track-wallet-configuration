@@ -1,14 +1,11 @@
 import React from "react";
+import SeedCollector from "../../../../../components/seed-collector";
 import Buttons from "../buttons";
 import Styles from "./confirm-seed.module.scss";
 
 interface Props {}
 
 const ConfirmSeed: React.FC<Props> = (props) => {
-  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-  const handleInput1Change = (e: React.ChangeEvent<HTMLInputElement>) => {};
   return (
     <div className={Styles.confirm}>
       <p className={Styles.confirm__heading}>
@@ -16,117 +13,8 @@ const ConfirmSeed: React.FC<Props> = (props) => {
         position.
       </p>
 
-      <form onSubmit={handleSubmit} className={Styles.confirm__inputs}>
-        <label>
-          {" "}
-          <span> #1 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #2 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #3 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #4 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #5 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #6 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #7 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #8 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #9 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
+      <SeedCollector />
 
-        <label>
-          {" "}
-          <span> #10 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #11 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-        <label>
-          {" "}
-          <span> #12 </span>
-          <input
-            type='text'
-            onChange={handleInput1Change}
-            className={Styles.confirm__input}
-          />{" "}
-        </label>
-      </form>
       <div className={Styles.confirm__btns}>
         <Buttons
           forwardLink='/finish'

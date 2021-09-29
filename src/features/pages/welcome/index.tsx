@@ -15,7 +15,7 @@ const Welcome: React.FC<Props> = (props) => {
         <Link to='/passwords' className={Styles.welcome__btn}>
           I'm new. let's get set up!
         </Link>
-        <Link to='#' className={Styles.welcome__btn}>
+        <Link to='/import' className={Styles.welcome__btn}>
           I already have a seed phrase. <br />
           Import Wallet
         </Link>
