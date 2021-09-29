@@ -1,0 +1,13 @@
+.footer {
+  margin-top: 7rem;
+  &__p {
+    text-align: center;
+    width: 526px;
+    margin: 2rem auto;
+    font-size: 18px;
+
+    a {
+      color: var(--primary-color);
+    }
+  }
+}

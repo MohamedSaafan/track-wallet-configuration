@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import Styles from "./stepper.module.scss";
 
 interface Props {
@@ -5,6 +6,14 @@ interface Props {
 }
 
 const Stepper: React.FC<Props> = ({ activeNumber }) => {
+  const url = useHistory().location.pathname;
+
+  activeNumber =
+    url === "/passwords/recovery/generate"
+      ? "2"
+      : url === "/passwords/recovery/confirm"
+      ? "3"
+      : "1";
   const block1Classes =
     activeNumber === "1" || activeNumber === "2" || "3"
       ? `${Styles.stepper__itemActive} ${Styles.stepper__item}`
@@ -28,6 +37,7 @@ const Stepper: React.FC<Props> = ({ activeNumber }) => {
     activeNumber === "3"
       ? `${Styles.stepper__lineActive} ${Styles.stepper__line}`
       : Styles.stepper__line;
+
   return (
     <div className={Styles.stepper}>
       <div className={block1Classes}>

@@ -1,0 +1,13 @@
+.header {
+  text-align: center;
+
+  img {
+    margin: 1rem auto 4rem;
+  }
+
+  &__heading {
+    font-size: 35px;
+    width: 300px;
+    margin: auto;
+  }
+}
